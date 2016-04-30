@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/*--------------
+	MAIN
+--------------*/
+body { 
+	/*background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right top;*/
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+}
+
+#logo{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: 10%;
+  	margin-bottom: auto;
+  	text-align: center;
+
+}
+
+#wrapper {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*--------------------
+|Menu Bar
+---------------------*/
+
+header {
+	background-color: #120C31;
+	width: 100%;
+	text-align: left;
+  height: 10%;
+  top: 0px;
+  height: 8%;
+  padding: 10px;
+
+}
+
+#logowithoutname {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: auto;
+  	margin-bottom: auto;
+  	text-align: center;
+}
+
+/*--------------------
+| Nav
+---------------------*/
+#menu-icon {
+
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #A98216 url(../_img/menu-icon.png) center;
+
+}
+
+a {
+  color: #E5575B;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+#links ul {
+
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  color: #C8585B;
+
+}
+
+nav {
+   width: 20%;
+   height: 10%;
+}
+
+#menu-icon {
+
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #E5575B url(../img/menu-icon.png) center;
+}
+
+
