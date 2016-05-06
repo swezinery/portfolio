@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Swezinery</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-		<header>
-			<img id="logowithoutname" src="img/logo.png" height="50" width="50">
-			<nav>
-				<a href="#" id="menu-icon"></a>
-				<ul>
-					<li><a href="branding.html">Branding</a></li>
-					<li><a href="di.html">Digital Imaging</a></li>
-					<li><a href="dl.html">Digital Illustration</a></li>	
-				</ul>
-			</nav>
-		</header>
-			<div id="wrapper">
-			   <ul id="portfolio" class="clearfix">
-			      <li><img src="img/bp_img/item01.jpg" alt="LANCE"></li>
-			      
-			      <li><img src="img/bp_img/item02.jpg" alt="Kyaw Htet"></li>
-			      
-			      <li><img src="img/bp_img/item03.jpg" alt="Ricco Ricco"></li>
+  <head>
+    <title>Swezinery</title>
+    <link rel="stylesheet" type="text/css" href="css/author.css"> 
+  </head>
 
-			       <li><img src="img/bp_img/item04.jpg" alt="Palmlicious"></li>
+  <body>
+    <div class="container">
+      <div id="sidebar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="branding.html">Branding</a></li>
+            <li><a href="di.html">Digital Imaging</a></li>
+            <li><a href="dl.html">Digital Illustration</a></li> 
+          </ul>
+      </div>
 
-			       <li><img src="img/bp_img/item05.jpg" alt="Asia Wing"></li>
+      <div class="main-content">
+          <div class="swipe-area"></div>
+          <a href="#" data-toggle=".container" id="sidebar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a>
 
-			       <li><img src="img/bp_img/item06.jpg" alt="Design Culture"></li>
+          <div class="content">
+              <ul id="portfolio" class="clearfix">
+                 <li><img src="img/bp_img/item01.jpg" alt="LANCE"></li>
+                 
+                 <li><img src="img/bp_img/item02.jpg" alt="Kyaw Htet"></li>
+                 
+                 <li><img src="img/bp_img/item03.jpg" alt="Ricco Ricco"></li>
 
-			       <li><img src="img/bp_img/item07.jpg" alt="Closer Clothing"></li>
+                  <li><img src="img/bp_img/item04.jpg" alt="Palmlicious"></li>
 
-			       <li><img src="img/bp_img/item08.jpg" alt="Closer Clothing"></li>
-			    </ul>
-			</div>
-	</body>
+                  <li><img src="img/bp_img/item05.jpg" alt="Asia Wing"></li>
+
+                  <li><img src="img/bp_img/item06.jpg" alt="Design Culture"></li>
+
+                  <li><img src="img/bp_img/item07.jpg" alt="Closer Clothing"></li>
+
+                  <li><img src="img/bp_img/item08.jpg" alt="Closer Clothing"></li>
+               </ul>
+          </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/author.js"></script>
+    <script type="text/javascript">
+
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+            swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                    if (phase=="move" && direction =="right") {
+                       $(".container").addClass("open-sidebar");
+                       return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+    </script>
+  </body>
 </html>
