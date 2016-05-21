@@ -1,0 +1,3 @@
+This plugin allows using the native sharing window of mobile device.
+It Works on Works on iOS6, iOS7, Android, version 2.3.3 and higher, Windows Phone 8.
+It can share text, a link, a images and supports sharing files from the internet, the local filesystem, or from the www folder. User can skip the sharing dialog and directly share to Twitter, Facebook, or other apps.
