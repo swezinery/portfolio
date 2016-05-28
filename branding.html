@@ -11,7 +11,35 @@
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/author.js"></script> 
     <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/SocialSharing.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+    <script type="text/javascript">
+      window.plugins.socialsharing.available(function(isAvailable) {
+        // the boolean is only false on iOS < 6
+        if (isAvailable) {
+          // now use any of the share() functions
+        }
+      });
 
+      // sharing multiple images via Facebook (you can mix protocols and file locations)
+      window.plugins.socialsharing.shareViaFacebook(
+        'Optional message, may be ignored by Facebook app',
+        ['https://www.google.nl/images/srpr/logo4w.png','www/image.gif'],
+        null);
+
+      // sharing a PDF and an image
+      window.plugins.socialsharing.share(
+        'Optional message',
+        'Optional title',
+        ['www/manual.pdf','https://www.google.nl/images/srpr/logo4w.png'],
+        'http://www.myurl.com');
+
+      window.plugins.socialsharing.iPadPopupCoordinates = function() {
+        var rect = document.getElementById('share_button').getBoundingClientRect();
+        return rect.left + "," + rect.top + "," + rect.width + "," + rect.height;
+      };
+    </script>
   </head>
 
   <body>
@@ -22,7 +50,7 @@
             <li><a class="transition" id="current" href="branding.html">Branding</a></li>
             <li><a class="transition" href="di.html">Digital Imaging</a></li>
             <li><a class="transition" href="dl.html">Digital Illustration</a></li>
-            <li><a class="transition" href="contact.html">Contact</a></li>  
+            <!-- <li><a class="transition" href="contact.html">Contact</a></li>   -->
           </ul>
       </div>
 
@@ -55,6 +83,15 @@
                   </ul>
           </div>
       </div>
+        <feature name="SocialSharing">
+          <param name="ios-package" value="SocialSharing" />
+        </feature>
+
+        <button onclick="window.plugins.socialsharing.shareViaTwitter('Message via Twitter')">message via Twitter</button>
+
+        <button onclick="window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter', null /* img */, 'http://www.x-services.nl')">msg and link via Twitter</button>
+
+        <button onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
     </div>
   </body>
 </html>
