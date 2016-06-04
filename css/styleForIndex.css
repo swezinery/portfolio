@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/*--------------
+	MAIN
+--------------*/
+body { 
+	margin-left: auto;
+  margin-right: auto;
+  /*background-color: black;*/
+}
+
+#logo{
+	 display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: 10%;
+  	margin-bottom: auto;
+  	text-align: center;
+
+}
+
+/*--------------------
+|Menu Bar
+---------------------*/
+
+header {
+	background-color: #120C31;
+	width: 100%;
+	text-align: left;
+  height: 10%;
+  top: 0px;
+  height: 8%;
+  padding: 10px;
+
+}
+
+/*-------------
+| Nav
+---------------*/
+
+#links ul {
+
+  list-style: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  line-height: 50px;
+}
+
+a {
+  /*color: black;*/
+  font: bold 20px/1.5 'Oswald', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+}
+a:hover {
+  color: #E5575B;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+  a {
+    background-color: #4B4B4B;
+    background-image: -webkit-linear-gradient(left, #E5575B 0%, orange 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+  a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+
+

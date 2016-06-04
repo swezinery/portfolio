@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow:hidden;
+  font-family: helvetica, serif;
+  font-weight: 100;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -webkit-transition:  left 0.4s ease-in-out;
+  -moz-transition:  left 0.4s ease-in-out;
+  -ms-transition:  left 0.4s ease-in-out;
+  -o-transition:  left 0.4s ease-in-out;
+  transition:  left 0.4s ease-in-out;
+}
+
+/*---------------
+| Nav Bar
+-----------------*/
+.container.open-sidebar {
+  left: 240px;
+}
+      
+.swipe-area {
+  position: absolute;
+  width: 50px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #f3f3f3;
+  z-index: 0;
+}
+
+#sidebar {
+    background: #fff;
+    position: absolute;
+    width: 240px;
+    height: 100%;
+    left: -240px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar ul li {
+    margin: 0;
+}
+
+#sidebar a {
+  font: bold 20px/1.5 'Oswald', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: .2s;
+}
+#sidebar a:hover {
+  color: #E5575B;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+ #sidebar a {
+    background-color: #4B4B4B;
+    background-image: -webkit-linear-gradient(left, #E5575B 0%, orange 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+ #sidebar a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+
+#current {
+  color: #E5575B;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+.main-content .content{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+padding-left: 60px;
+width: 100%;
+}
+
+.main-content .content h1{
+    font-weight: 100;
+}
+
+.main-content .content p{
+    width: 100%;
+    line-height: 160%;
+}
+
+.main-content #sidebar-toggle {
+    background: #E5575B;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    padding: 10px 7px;
+    float: left;
+}
+
+.main-content #sidebar-toggle .bar{
+     display: block;
+    width: 18px;
+    margin-bottom: 3px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;   
+}
+
+.main-content #sidebar-toggle .bar:last-child{
+     margin-bottom: 0;   
+}
+
+/*-----------------------------
+| LightBox
+------------------------------*/
+
+br { display: block; line-height: 1.6em; } 
+
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }*/
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+strong, b { 
+  font-weight: bold; 
+}
+
+em, i { 
+  font-style: italic; 
+}
+
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0;
+}
+
+img { 
+  border: 0; 
+  max-width: 100%;
+}
+
+h2 {
+  font-family: 'Roboto Slab', Tahoma, sans-serif;
+  font-size: 2.1em;
+  font-weight: 700;
+  line-height: 1.55em;
+  margin-bottom: 18px;
+  text-align: center;
+  color: #A98216;
+  letter-spacing: -0.06em;
+  text-align: center;
+  margin-top: 15%;
+}
+
+#wrapper {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#portfolio {
+  display: block;
+}
+
+#portfolio li {
+  display: block;
+  float: left;
+  width: 30%;
+  max-width: 200px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+#portfolio li a {
+  display: block;
+  padding: 8px;
+}
+
+.mfp-title {
+  font-size: 1.2em;
+  color: #ddd !important;
+  font-weight: 700;
+  font-family: 'Roboto', Tahoma, sans-serif;
+  padding: 5px 0px 0px 0px;
+}
+
+#portfolio li img {
+  width: 80%;
+  height: 80%;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.25);
+  box-shadow: 1px 2px 2px rgba(0,0,0,0.25);
+}
+
+/**----------------
+|  clearfix 
+------------------**/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+/*------------------
+| Contact
+-------------------*/
+
+#content3 {
+  padding: 10px 0px 0px 0px;
+  position: relative;
+  margin-left: 70px;
+  /*margin-right: 20px;*/
+  overflow: hidden;
+}
+
+#headlines-contact p {
+  font-family: 'Helvetica Neue', serif;
+  color: #E5575B;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.info p, a{
+  font-size: 1em;
+  color: #E5575B;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  padding: 0px;
+  text-decoration: none;
+  font-weight: none;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.info a {
+  text-transform: lowercase;
+}
+
+.fa-envelope  {
+  padding-right: 10px;
+}
+.fa-globe  {
+  padding-right: 10px;
+}
+.fa-map-marker  {
+  padding-right: 10px;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+ .info a {
+    background-color: #4B4B4B;
+    background-image: -webkit-linear-gradient(left, #E5575B 0%, orange 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+  .info a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
