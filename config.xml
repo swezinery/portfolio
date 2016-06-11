@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap.example"
+        id          = "com.SweZin.example"
         versionCode = "10" 
         version     = "1.0.0" >
 
@@ -13,8 +13,8 @@
         An example for phonegap build docs. 
     </description>
 
-    <author href="https://build.phonegap.com" email="support@phonegap.com">
-        Swe Zin
+    <author href="http://swezinery.com/" email="evyzin@gmail.com">
+        Swe Zin Thant
     </author>
 
     <plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
