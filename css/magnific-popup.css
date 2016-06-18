@@ -247,7 +247,7 @@ img.mfp-img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 0 40px;
+  padding: 10px 0 10px;
   margin: 0 auto; }
 
 /* The shadow behind the image */
@@ -294,6 +294,20 @@ img.mfp-img {
 
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer; }
+
+/*----------------
+| Facebook Button
+------------------*/
+.facebook_button {
+  margin-left: 25em;
+  line-height: 25px;
+  background-color: #87ddff;
+  border-radius: 5px;
+  border-color: #87ddff;
+  box-shadow: 0px;
+  border-style: none;
+
+  /*border-style: none;*/
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
   /**
@@ -366,3 +380,10 @@ img.mfp-img {
   top: 0;
   right: 0;
   padding-top: 0; }
+
+}
+
+
+
+
+

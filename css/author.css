@@ -6,6 +6,7 @@ body, html {
   overflow:hidden;
   font-family: helvetica, serif;
   font-weight: 100;
+  line-height: 25px;
 }
 
 .container {
@@ -223,9 +224,10 @@ h2 {
 .mfp-title {
   font-size: 1.2em;
   color: #ddd !important;
-  font-weight: 700;
-  font-family: 'Roboto', Tahoma, sans-serif;
+  font-weight: thin;
+  font-family: 'Helvetica Neue', sans-serif;
   padding: 5px 0px 0px 0px;
+  letter-spacing: 2px;
 }
 
 #portfolio li img {

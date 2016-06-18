@@ -6,7 +6,16 @@ $(function(){
     type: 'image',
     image: {
       cursor: null,
-      titleSrc: 'title'
+      titleSrc: 'title',
+      markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+
+            '<div class="mfp-bottom-bar">'+
+              '<div class="mfp-title"></div>'+
+              '<div class="mfp-counter"></div>'+
+            '</div>'+
+            "<button class=\"facebook_button\" onclick=\"window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */\">Facebook</button>" +
+          '</div>'
     },
     gallery: {
       enabled: true,
